@@ -16,8 +16,11 @@
 
     @media only screen and (max-width: $bp-smallest) {
         order: 1;
-        flex: 0 0 100%;
+        flex: 0 0 90%;
         background-color: var(--color-grey-light-2);
+        border-radius: 5rem;
+        
+        margin: 0 auto;
     }
 
     &__input{
@@ -251,6 +254,12 @@
     align-items: center;
 
     border-bottom: var(--line);
+
+    @media only screen and (max-width: $bp-smallest) {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 2rem;
+    }
      
     &__heading{
         font-size: 2.25rem;
@@ -263,11 +272,21 @@
             font-size: 1.8rem;
             padding: 1.25rem 2rem;
         }
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 3rem;
+        }
+        
     }
 
     &__stars{
         margin-right: auto;
         display: flex;
+
+        @media only screen and (max-width: $bp-smallest) {
+        margin-left: 1.5rem;
+        margin-top: -1rem;
+        }
     }
 
     &__icon-star,
@@ -281,6 +300,13 @@
         font-size: 1.2rem;
         display: flex;
         align-items: center;
+
+        
+        @media only screen and (max-width: $bp-smallest) {
+            align-self: flex-end;
+            margin-right: 1rem;
+            margin-top: -2rem;
+        }
     }
 
     &__icon-location {
@@ -302,6 +328,23 @@
         @media only screen and (max-width: $bp-small) {
             padding: 0 1.5rem;
         }
+
+        @media only screen and (max-width: $bp-smallest) {
+            margin: 0 auto;
+            width: 100%;
+            order: -1;
+
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            background-image: linear-gradient(
+            rgba(var(--color-primary-rgb), 2),
+            rgba(var(--color-primary-rgb), 0.34)
+            ), url(../img/hotel-2.jpg);
+
+            background-size: cover;
+        }   
     }
 
     &__rating-average{
@@ -312,6 +355,11 @@
         @media only screen and (max-width: $bp-small) {
             font-size: 1.8rem;
         }
+
+        @media only screen and (max-width: $bp-smallest) {
+            padding-bottom: .5rem ;
+            font-size: 4rem;
+        }      
     }
 
     &__rating-count{
@@ -320,7 +368,11 @@
 
         @media only screen and (max-width: $bp-small) {
             font-size: .5rem;
-        }
+        }   
+        
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 2rem;
+        }      
     }
 }
 
